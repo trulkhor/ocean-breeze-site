@@ -1,62 +1,62 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.oceanbreezerecoveryhousing.com";
+const BASE_URL = "https://oceanbreezerecoveryhousing.com";
 
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: baseUrl,
+      url: BASE_URL,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${BASE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/amenities`,
+      url: `${BASE_URL}/amenities`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/admissions`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/admissions`,
+      url: `${BASE_URL}/faq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.9,
+      priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${BASE_URL}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/blog/sober-living-cost-west-palm-beach`,
+      lastModified: new Date("2026-01-15"),
+      changeFrequency: "yearly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/blog/what-to-expect-first-week-sober-living`,
-      lastModified: new Date("2025-03-15"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/benefits-sober-living-west-palm-beach`,
-      lastModified: new Date("2025-04-01"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/farr-certified-sober-living-what-it-means`,
-      lastModified: new Date("2025-04-15"),
-      changeFrequency: "monthly",
+      url: `${BASE_URL}/blog/what-to-expect-sober-living`,
+      lastModified: new Date("2026-01-22"),
+      changeFrequency: "yearly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      url: `${BASE_URL}/blog/sober-living-vs-halfway-house`,
+      lastModified: new Date("2026-02-05"),
+      changeFrequency: "yearly",
+      priority: 0.7,
     },
   ];
 }

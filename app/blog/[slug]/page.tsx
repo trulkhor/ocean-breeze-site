@@ -210,7 +210,9 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Main Content */}
           <article className="lg:col-span-2 prose-lg" aria-label={post.title}>
             <div className="text-gray-700">
-              {renderContent(post.content)}
+              {post.content ? renderContent(post.content) : (
+                <p className="text-gray-600 leading-relaxed">{post.excerpt}</p>
+              )}
             </div>
 
             {/* Article Footer CTA */}

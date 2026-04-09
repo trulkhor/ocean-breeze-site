@@ -25,31 +25,31 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "what-to-expect-first-week-sober-living",
-    title: "What to Expect in Your First Week at a Sober Living Home",
+    slug: "sober-living-cost-west-palm-beach",
+    title: "How Much Does Sober Living Cost in West Palm Beach? [2026 Guide]",
     excerpt:
-      "Moving into a sober living home is a major step forward in your recovery journey. Here's an honest look at what your first week will feel like, what challenges to expect, and how to set yourself up for success.",
-    date: "2025-03-15",
+      "A practical, honest breakdown of sober living costs in West Palm Beach, FL. Learn what's included at different price points, what the average weekly rate is, and how Ocean Breeze at $275/week compares.",
+    date: "2026-01-15",
     readTime: "7 min",
+    category: "Pricing",
+  },
+  {
+    slug: "what-to-expect-sober-living",
+    title: "What to Expect in Sober Living: A Complete Guide",
+    excerpt:
+      "New to sober living? Learn what to expect during your stay — daily structure, house rules, community life, employment requirements, and how to make the most of your recovery journey.",
+    date: "2026-02-01",
+    readTime: "8 min",
     category: "Recovery Tips",
   },
   {
-    slug: "benefits-sober-living-west-palm-beach",
-    title: "The Benefits of Sober Living Housing in West Palm Beach, FL",
+    slug: "sober-living-vs-halfway-house",
+    title: "Sober Living vs Halfway House: What's the Difference?",
     excerpt:
-      "West Palm Beach offers a unique environment for recovery — with access to a strong sober community, treatment resources, and employment opportunities. Discover why sober living in West Palm Beach gives recovering men a powerful edge.",
-    date: "2025-04-01",
+      "Confused about sober living homes vs halfway houses? We break down the key differences in cost, structure, requirements, oversight, and who each type of housing is best suited for.",
+    date: "2026-02-20",
     readTime: "6 min",
-    category: "Sober Living",
-  },
-  {
-    slug: "farr-certified-sober-living-what-it-means",
-    title: "FARR Certified Sober Living: What It Means for Your Recovery",
-    excerpt:
-      "The Florida Association of Recovery Residences (FARR) certification is the gold standard for sober living quality in Florida. Learn what the certification process involves and why it matters when choosing a recovery residence.",
-    date: "2025-04-15",
-    readTime: "6 min",
-    category: "Certification",
+    category: "Education",
   },
 ];
 

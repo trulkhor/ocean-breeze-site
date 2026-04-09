@@ -1,324 +1,260 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PageHero from "@/components/PageHero";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Sober Living vs. Halfway House: Key Differences Explained",
+  title: "Sober Living vs Halfway House: What's the Difference?",
   description:
-    "What's the difference between a sober living home and a halfway house? We explain the key distinctions in funding, structure, oversight, population, and purpose to help you choose the right option.",
-  openGraph: {
-    title: "Sober Living vs. Halfway House: What's the Difference?",
-    description:
-      "Sober living homes and halfway houses aren't the same thing. Learn the key differences in funding, rules, oversight, and who each is designed for.",
-    url: "https://www.oceanbreezerecoveryhousing.com/blog/sober-living-vs-halfway-house",
+    "Confused about sober living vs halfway houses? We break down the key differences in cost, structure, requirements, and who each is best for.",
+  alternates: {
+    canonical: "https://oceanbreezerecoveryhousing.com/blog/sober-living-vs-halfway-house",
   },
-};
-
-const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Sober Living vs. Halfway House: What's the Difference?",
-  description:
-    "A clear explanation of the differences between sober living homes and halfway houses, covering funding, structure, oversight, population, and how to choose the right option for recovery.",
-  author: {
-    "@type": "Organization",
-    name: "Ocean Breeze Recovery Housing",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Ocean Breeze Recovery Housing",
-    url: "https://www.oceanbreezerecoveryhousing.com",
-  },
-  datePublished: "2025-02-10",
-  url: "https://www.oceanbreezerecoveryhousing.com/blog/sober-living-vs-halfway-house",
 };
 
 export default function SoberLivingVsHalfwayHousePost() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      <PageHero
+        title="Sober Living vs Halfway House: What's the Difference?"
+        subtitle="Understanding your housing options in recovery — and which one is right for you."
+        breadcrumb={[
+          { label: "Blog", href: "/blog" },
+          { label: "Sober Living vs Halfway House" },
+        ]}
       />
 
-      {/* Header */}
-      <section
-        className="py-16 md:py-20"
-        style={{ background: "linear-gradient(135deg, #0D9488 0%, #0f766e 100%)" }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-teal-200 text-sm mb-4" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href="/blog" className="hover:text-white">Blog</Link>
-            <span className="mx-2">/</span>
-            <span className="text-white">Sober Living vs. Halfway House</span>
-          </nav>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-bold text-white bg-white/20">Education</span>
-            <span className="text-teal-200 text-sm">7 min read &bull; February 10, 2025</span>
-          </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-            Sober Living vs. Halfway House: What&apos;s the Difference?
-          </h1>
-        </div>
-      </section>
+      <article className="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+        <div className="space-y-8 text-gray-600 leading-relaxed">
 
-      {/* Article */}
-      <article className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <p className="text-xl text-gray-700 leading-relaxed mb-8 font-medium">
-            &quot;Sober living&quot; and &quot;halfway house&quot; are often used interchangeably, but they refer to
-            meaningfully different types of housing. Understanding the distinction can help you or a loved one
-            choose the right option — and avoid confusion when researching recovery housing.
+          <p className="text-lg">
+            When people search for sober housing, they often encounter two terms: <em>sober living
+            home</em> and <em>halfway house</em>. While these terms are sometimes used
+            interchangeably, they refer to meaningfully different types of housing. Understanding
+            the difference can help you — or someone you love — make the right choice for
+            recovery.
           </p>
 
-          {/* Comparison Table */}
-          <div className="overflow-x-auto mb-10 rounded-2xl border border-gray-100 shadow-sm">
-            <table className="w-full text-sm">
-              <thead>
-                <tr style={{ backgroundColor: "#0D9488" }}>
-                  <th className="text-left text-white px-5 py-4 font-semibold">Factor</th>
-                  <th className="text-left text-white px-5 py-4 font-semibold">Sober Living Home</th>
-                  <th className="text-left text-white px-5 py-4 font-semibold">Halfway House</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {[
-                  ["Funding", "Private pay (resident-funded)", "Government/grant funded or subsidized"],
-                  ["Who lives there", "Voluntary — anyone in recovery", "Often court-ordered or post-incarceration"],
-                  ["Oversight", "House manager (live-in or visiting)", "Often government or state oversight"],
-                  ["Length of stay", "Flexible — months to years", "Often limited (90–180 days typical)"],
-                  ["Cost to resident", "$175–$500+/week", "Free or very low cost"],
-                  ["Employment req.", "Common requirement", "Varies widely"],
-                  ["Drug testing", "Usually random and frequent", "Varies; often required"],
-                  ["Independence", "High — self-managed schedule", "Lower — more structured oversight"],
-                  ["Certification", "Optional (FARR, NARR, etc.)", "Often licensed or regulated"],
-                  ["Stigma", "Generally less stigma", "Can carry more public stigma"],
-                ].map(([factor, sober, halfway]) => (
-                  <tr key={factor as string} className="hover:bg-gray-50">
-                    <td className="px-5 py-3 font-medium text-gray-900">{factor as string}</td>
-                    <td className="px-5 py-3 text-gray-700">{sober as string}</td>
-                    <td className="px-5 py-3 text-gray-700">{halfway as string}</td>
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Halfway House?</h2>
+            <p className="mb-4">
+              A halfway house is typically a government-funded or nonprofit transitional housing
+              facility designed to help people reintegrate into society after incarceration or
+              the completion of a residential treatment program. The term &quot;halfway&quot;
+              reflects its role as a midpoint — between institutional living and full independence.
+            </p>
+            <p className="mb-4">
+              Halfway houses are often mandated by the court system or parole boards, meaning
+              residency may not be a voluntary choice. Funding typically comes from the government,
+              which means the cost to residents is low or zero — but so are the amenities.
+            </p>
+            <p>
+              Halfway houses tend to have more rigid rules, fewer amenities, and larger populations
+              of residents with more complex legal or criminal justice backgrounds. Length of stay
+              is often determined by the court or program administrators, not by the resident.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Sober Living Home?</h2>
+            <p className="mb-4">
+              A sober living home (also called a sober living house or recovery residence) is a
+              privately operated, substance-free housing option for people in recovery from
+              addiction. Unlike halfway houses, sober living is voluntary — residents choose to
+              be there because they want a structured, supportive environment as they build their
+              sober life.
+            </p>
+            <p className="mb-4">
+              Sober living homes are funded by the residents themselves through weekly or monthly
+              rent. This creates a different dynamic: residents have a financial stake in their
+              recovery environment, and the home operates more like a community than an institution.
+            </p>
+            <p>
+              Quality sober living homes set expectations around sobriety, employment, and house
+              rules — but residents generally have more autonomy than in a halfway house or
+              residential treatment setting.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Differences: Sober Living vs Halfway House</h2>
+            <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden my-6">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr style={{ backgroundColor: "#f0fdfa" }}>
+                    <th className="text-left p-4 font-semibold text-gray-900 w-1/3">Category</th>
+                    <th className="text-left p-4 font-semibold" style={{ color: "#0d9488" }}>Sober Living Home</th>
+                    <th className="text-left p-4 font-semibold text-gray-700">Halfway House</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody>
+                  {[
+                    { cat: "Funding", sl: "Private pay (residents)", hw: "Government / nonprofit" },
+                    { cat: "Cost", sl: "$200–$500/week", hw: "Low cost or free" },
+                    { cat: "Voluntary?", sl: "Yes — always voluntary", hw: "Often court-mandated" },
+                    { cat: "Who it serves", sl: "Anyone in recovery", hw: "Often justice-involved individuals" },
+                    { cat: "Amenities", sl: "Varies — often furnished", hw: "Often minimal" },
+                    { cat: "Length of stay", sl: "Resident-determined", hw: "Often program/court-determined" },
+                    { cat: "Employment req.", sl: "Often required", hw: "Varies" },
+                    { cat: "Drug testing", sl: "Yes — random screening", hw: "Yes — typically strict" },
+                    { cat: "Oversight", sl: "On-site manager or owner", hw: "Program staff or officers" },
+                  ].map((row, i) => (
+                    <tr key={row.cat} className={`border-t border-gray-100 ${i % 2 === 1 ? "bg-gray-50" : ""}`}>
+                      <td className="p-4 font-medium text-gray-800">{row.cat}</td>
+                      <td className="p-4 text-gray-700">{row.sl}</td>
+                      <td className="p-4 text-gray-600">{row.hw}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Sober Living Home?</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            A sober living home (also called a sober living residence, recovery home, or transitional
-            housing) is a privately run, resident-funded home where individuals in recovery from substance
-            use disorders live together in a drug- and alcohol-free environment.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Residents of sober living homes choose to be there voluntarily. They pay weekly or monthly
-            rent out of their own income (or with family support), follow house rules, maintain sobriety,
-            and in many homes, maintain employment. The manager may live on-site or visit regularly.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Sober living homes are typically not licensed as medical facilities and do not provide clinical
-            services such as therapy or medication-assisted treatment. Their value is environmental:
-            they provide a safe, sober, structured place to live while a person builds a life in recovery.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            Quality sober living homes may seek voluntary certification through organizations like the
-            Florida Association of Recovery Residences (FARR) or the National Alliance for Recovery
-            Residences (NARR). Certification doesn&apos;t make a home legal — it signals adherence to
-            voluntary quality standards.
-          </p>
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Pros and Cons of Each</h2>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What Is a Halfway House?</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The term &quot;halfway house&quot; has a more specific — and more varied — history. Originally, it
-            referred to transitional housing for people leaving incarceration or psychiatric care — a
-            step that was &quot;halfway&quot; between institutional living and full independence.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Today, halfway houses for substance use recovery typically refer to government-funded or
-            grant-funded transitional housing, often connected to court systems, parole/probation
-            requirements, or treatment programs. Residents may be court-ordered to live in a halfway
-            house as a condition of their release or sentence.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Because they are often government-funded, halfway houses are typically free or very low cost
-            to residents. They are also typically more strictly regulated and may have more rigid rules
-            about length of stay (often capped at 90–180 days), curfews, and mandatory programming.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            It&apos;s worth noting that &quot;halfway house&quot; is used colloquially in different ways in different
-            communities. In some areas, people use &quot;halfway house&quot; to mean any sober living — this can
-            cause confusion. Always ask specifically about funding, oversight, cost, and requirements
-            when evaluating any recovery housing option.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Differences in Depth</h2>
-
-          <div className="space-y-8 mb-10">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ color: "#0D9488" }}>
-                1. Who Goes There
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Sober living homes serve anyone in recovery who chooses to live there voluntarily — men
-                and women (most homes are gender-specific), people post-treatment, people in long-term
-                recovery who want accountability, and anyone who wants the structure of a sober environment.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
-                Halfway houses more commonly serve people with criminal justice involvement (parolees,
-                probationers, people completing drug court requirements) or people transitioning from
-                institutional settings. This distinction matters for the environment and culture inside
-                the home.
-              </p>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Sober Living Homes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div
+                className="rounded-xl p-5 border"
+                style={{ backgroundColor: "#f0fdfa", borderColor: "#99f6e4" }}
+              >
+                <p className="font-semibold text-gray-900 mb-2" style={{ color: "#0f766e" }}>Pros</p>
+                <ul className="space-y-1 text-sm">
+                  {[
+                    "Voluntary — you're there by choice",
+                    "More autonomy and independence",
+                    "Often better amenities",
+                    "Community of peers in recovery",
+                    "Flexible length of stay",
+                    "Employment helps you build financial stability",
+                  ].map((p) => <li key={p} className="flex items-start gap-1"><span style={{ color: "#0d9488" }}>+</span> {p}</li>)}
+                </ul>
+              </div>
+              <div className="rounded-xl p-5 bg-gray-50 border border-gray-200">
+                <p className="font-semibold text-gray-900 mb-2">Cons</p>
+                <ul className="space-y-1 text-sm">
+                  {[
+                    "Costs money (private pay)",
+                    "Must meet eligibility requirements",
+                    "No clinical services on-site",
+                    "Quality varies widely",
+                  ].map((p) => <li key={p} className="flex items-start gap-1"><span className="text-gray-400">−</span> {p}</li>)}
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ color: "#0D9488" }}>
-                2. Cost and Funding
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                This is the most practical difference for most people. Sober living is private pay —
-                typically $175–$500/week depending on quality and location. Halfway houses funded by
-                the government are often free or heavily subsidized.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
-                The tradeoff: the free nature of government halfway houses also means demand is high,
-                waitlists can be long, and beds are allocated based on court orders or other criteria
-                rather than voluntary choice. Sober living homes are available to anyone who can pay
-                and meets the requirements.
-              </p>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Halfway Houses</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div
+                className="rounded-xl p-5 border"
+                style={{ backgroundColor: "#f0fdfa", borderColor: "#99f6e4" }}
+              >
+                <p className="font-semibold mb-2" style={{ color: "#0f766e" }}>Pros</p>
+                <ul className="space-y-1 text-sm">
+                  {[
+                    "Low cost or free",
+                    "May be required by courts",
+                    "Structured oversight",
+                    "Accessible for justice-involved individuals",
+                  ].map((p) => <li key={p} className="flex items-start gap-1"><span style={{ color: "#0d9488" }}>+</span> {p}</li>)}
+                </ul>
+              </div>
+              <div className="rounded-xl p-5 bg-gray-50 border border-gray-200">
+                <p className="font-semibold text-gray-900 mb-2">Cons</p>
+                <ul className="space-y-1 text-sm">
+                  {[
+                    "Often mandatory — less autonomy",
+                    "Fewer amenities",
+                    "May mix populations with different needs",
+                    "Limited resident choice",
+                    "Stigma can be a barrier to openness",
+                  ].map((p) => <li key={p} className="flex items-start gap-1"><span className="text-gray-400">−</span> {p}</li>)}
+                </ul>
+              </div>
             </div>
+          </section>
 
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ color: "#0D9488" }}>
-                3. Level of Independence
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Sober living homes typically offer significantly more independence than halfway houses
-                or treatment programs. You set your own schedule (within house rules), choose your own
-                job, attend meetings of your choice, and manage your own money.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
-                This independence is valuable for building real-world recovery skills — but it also
-                requires real readiness. Men who enter sober living while still very early in withdrawal
-                or with significant mental health needs may do better with a higher level of clinical
-                care first.
-              </p>
-            </div>
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Who Is a Good Fit for Sober Living?</h2>
+            <p className="mb-4">
+              Sober living is ideal for men who:
+            </p>
+            <ul className="space-y-2 mb-4">
+              {[
+                "Have completed inpatient or residential treatment and need a structured transition",
+                "Are serious about sobriety and want to live among others with the same commitment",
+                "Are employed or ready to work — and can afford weekly rent",
+                "Want more autonomy than a treatment setting, but more structure than living alone",
+                "Are not court-mandated and are choosing recovery voluntarily",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2 text-sm">
+                  <svg className="h-5 w-5 mt-0.5 shrink-0" style={{ color: "#0d9488" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ color: "#0D9488" }}>
-                4. Length of Stay
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Sober living homes generally have no maximum length of stay (beyond what management
-                determines). Residents can stay as long as they continue to follow house rules, pay
-                rent, and maintain employment. Many men stay six months to two years.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-3">
-                Government-funded halfway houses typically have time limits — 90 to 180 days is common,
-                though some programs extend longer. This time pressure can be either motivating or
-                destabilizing, depending on the individual.
-              </p>
-            </div>
-          </div>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Which Is Right for You?</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            The right choice depends on your situation:
-          </p>
-          <div className="space-y-4 mb-8">
-            <div className="rounded-xl p-4 bg-teal-50 border border-teal-100">
-              <h4 className="font-bold text-teal-900 mb-1">Consider sober living if:</h4>
-              <ul className="text-teal-800 text-sm space-y-1">
-                <li>• You are voluntarily seeking a structured, sober environment</li>
-                <li>• You are employed or will be employed quickly</li>
-                <li>• You can afford the weekly rate</li>
-                <li>• You want more independence than treatment but more structure than living alone</li>
-                <li>• You are completing or have completed a clinical treatment program</li>
-              </ul>
-            </div>
-            <div className="rounded-xl p-4 bg-amber-50 border border-amber-100">
-              <h4 className="font-bold text-amber-900 mb-1">Consider halfway house or other options if:</h4>
-              <ul className="text-amber-800 text-sm space-y-1">
-                <li>• You are court-ordered to transitional housing</li>
-                <li>• You cannot afford private sober living</li>
-                <li>• You need a more supervised or clinical environment</li>
-                <li>• You are on parole or probation requiring specific housing</li>
-              </ul>
-            </div>
-          </div>
-
-          <p className="text-gray-700 leading-relaxed mb-8">
-            If you&apos;re unsure, talk to a counselor, social worker, or recovery coach who knows the
-            resources in your area. In West Palm Beach, there are resources to help you navigate your
-            options.
-          </p>
-
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">The Bottom Line</h2>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Sober living homes and halfway houses serve overlapping but distinct populations, through
-            different funding models, with different levels of independence and oversight. Neither is
-            universally better — the right choice depends on your individual needs, resources, and
-            recovery stage.
-          </p>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            What both share is the fundamental principle: recovery is harder alone. Having a community,
-            a structure, and accountability — whether in a sober living home or another form of
-            transitional housing — dramatically improves outcomes compared to returning immediately to
-            independent living after treatment.
-          </p>
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              How Ocean Breeze Recovery Housing Fits In
+            </h2>
+            <p className="mb-4">
+              Ocean Breeze Recovery Housing is a private, men&apos;s sober living home in West Palm
+              Beach, FL. It is not a halfway house. Residents choose to live here voluntarily
+              because they want a structured, supportive, substance-free environment to grow their
+              recovery.
+            </p>
+            <p className="mb-4">
+              At $275/week — with utilities, furnished rooms, workout equipment, house supplies,
+              and 24/7 access to live-in manager Kevin Smith — Ocean Breeze offers genuine value
+              in the West Palm Beach recovery housing market.
+            </p>
+            <p>
+              If you&apos;re a man who is serious about his sobriety, has employment or is actively
+              seeking it, and wants to live in a community of men with the same commitment, Ocean
+              Breeze may be exactly what you&apos;re looking for.
+            </p>
+          </section>
 
           <div
-            className="rounded-2xl p-8 text-white mt-6"
-            style={{ background: "linear-gradient(135deg, #0D9488, #065f46)" }}
+            className="rounded-2xl p-8 border mt-6"
+            style={{ backgroundColor: "#f0fdfa", borderColor: "#99f6e4" }}
           >
-            <h3 className="text-xl font-bold mb-2">About Ocean Breeze Recovery Housing</h3>
-            <p className="text-teal-100 mb-4">
-              Ocean Breeze is a private sober living home in West Palm Beach, FL — men only, $275/week
-              all-inclusive, with a live-in manager available 24/7. We are pursuing FARR certification.
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Questions?</h3>
+            <p className="text-gray-600 mb-4 text-sm">
+              Not sure if sober living is right for you? Browse our FAQ or reach out to Kevin
+              Smith directly. He&apos;s happy to talk through your options without any pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="/admissions"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white transition-all hover:opacity-90"
-                style={{ backgroundColor: "#F97316" }}
+                href="/faq"
+                className="inline-flex items-center justify-center px-6 py-3 font-semibold text-white text-sm rounded-full transition-all hover:opacity-90"
+                style={{ backgroundColor: "#0d9488" }}
               >
-                Check Availability
+                Read the FAQ
               </Link>
               <Link
-                href="/about"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-teal-800 bg-white transition-all hover:bg-teal-50"
+                href="/admissions"
+                className="inline-flex items-center justify-center px-6 py-3 font-semibold text-sm rounded-full border-2 transition-all hover:bg-teal-50"
+                style={{ borderColor: "#0d9488", color: "#0d9488" }}
               >
-                Learn About Our Program
+                Apply to Ocean Breeze
               </Link>
             </div>
           </div>
 
-          {/* Related Posts */}
-          <div className="mt-16 pt-10 border-t border-gray-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Related Articles</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Link
-                href="/blog/cost-of-sober-living-west-palm-beach"
-                className="p-4 rounded-xl border border-gray-100 hover:border-teal-200 hover:bg-teal-50 transition-all"
-              >
-                <p className="font-semibold text-gray-900 text-sm">Cost of Sober Living in West Palm Beach: 2025 Guide &rarr;</p>
-              </Link>
-              <Link
-                href="/blog/what-to-expect-sober-living"
-                className="p-4 rounded-xl border border-gray-100 hover:border-teal-200 hover:bg-teal-50 transition-all"
-              >
-                <p className="font-semibold text-gray-900 text-sm">What to Expect in Your First Month at Sober Living &rarr;</p>
-              </Link>
-            </div>
-          </div>
         </div>
       </article>
 
-      <ContactCTA />
+      <ContactCTA
+        title="Interested in Sober Living at Ocean Breeze?"
+        subtitle="Men's sober living in West Palm Beach. $275/week, all-inclusive. Apply today."
+        showPhone={true}
+      />
     </>
   );
 }

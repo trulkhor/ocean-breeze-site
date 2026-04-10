@@ -58,5 +58,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/blog/benefits-sober-living-west-palm-beach`,
+      lastModified: new Date("2026-04-10"),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
   ];
 }

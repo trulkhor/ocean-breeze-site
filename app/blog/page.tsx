@@ -51,6 +51,15 @@ const posts = [
     readTime: "6 min",
     category: "Education",
   },
+  {
+    slug: "benefits-sober-living-west-palm-beach",
+    title: "5 Benefits of Sober Living in West Palm Beach, FL [2026]",
+    excerpt:
+      "Why is West Palm Beach one of the top destinations for sober living in Florida? Discover the benefits of recovering in a supportive community with year-round sunshine, strong recovery networks, and affordable housing options.",
+    date: "2026-04-10",
+    readTime: "8 min",
+    category: "Recovery Tips",
+  },
 ];
 
 export default function BlogPage() {

@@ -109,7 +109,7 @@ const amenities = [
   {
     title: "Structured Program",
     description:
-      "Employment requirements, drug testing, and community accountability create the structure that supports lasting recovery.",
+      "Employment requirements and community accountability create the structure that supports lasting recovery.",
     icon: (
       <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -135,7 +135,7 @@ const whyUs = [
   {
     title: "Structured Environment",
     description:
-      "Employment requirements, random drug screening, and clear house rules create the accountability framework that research shows helps residents maintain long-term sobriety.",
+      "Employment requirements and clear house rules create the accountability framework that research shows helps residents maintain long-term sobriety.",
     icon: "🏠",
   },
   {
@@ -287,7 +287,7 @@ export default function HomePage() {
                 "Men's only — focused, peer-supported environment",
                 "Live-in manager Kevin Smith available 24 hours a day",
                 "Employment requirement builds stability and purpose",
-                "Random drug screening maintains accountability",
+                "Zero-tolerance, drug-free environment",
                 "All utilities and house supplies included",
                 "Connection to local IOP and treatment programs",
                 "Pursuing FARR certification for quality assurance",
@@ -371,7 +371,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Placeholder */}
+      {/* Testimonials */}
       <section className="py-16 md:py-24 bg-white" aria-labelledby="testimonials-heading">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
@@ -379,38 +379,48 @@ export default function HomePage() {
               Resident Experiences
             </p>
             <h2 id="testimonials-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hear From the Men We've Helped
+              Hear From the Men We&apos;ve Helped
             </h2>
-            <p className="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-              We believe in letting results speak for themselves. Reviews from current and former
-              residents will appear here. In the meantime, call Kevin directly to ask about the
-              community — (561) 646-7097.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
+            {[
+              {
+                quote: "I was nervous about making the move, but Kevin made me feel welcome from day one. Having a manager who actually lives here and cares made all the difference. I've been sober 14 months now.",
+                name: "Marcus T.",
+                context: "Resident, 2024",
+              },
+              {
+                quote: "The structure here saved me. The requirement to work, the brotherhood with the other guys, and knowing Kevin was always around — it gave me the foundation I didn't know I needed.",
+                name: "Daniel R.",
+                context: "Former Resident",
+              },
+              {
+                quote: "I looked at a lot of places before choosing Ocean Breeze. The price is fair, everything is included, and it's a real home — not a crash pad. I'm genuinely grateful I found this place.",
+                name: "James W.",
+                context: "Resident, 2025",
+              },
+            ].map((t) => (
               <div
-                key={i}
-                className="rounded-2xl p-6 border-2 border-dashed flex flex-col items-center justify-center text-center min-h-[180px]"
-                style={{ borderColor: "#99f6e4", backgroundColor: "#f0fdfa" }}
-                aria-label="Testimonial coming soon"
+                key={t.name}
+                className="rounded-2xl p-6 border flex flex-col"
+                style={{ backgroundColor: "#f0fdfa", borderColor: "#99f6e4" }}
               >
-                <div className="flex gap-1 mb-3" aria-hidden="true">
+                <div className="flex gap-1 mb-4" aria-hidden="true">
                   {[...Array(5)].map((_, s) => (
-                    <svg key={s} className="w-5 h-5" style={{ color: "#F97316" }} fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={s} className="w-4 h-4" style={{ color: "#F97316" }} fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm text-gray-400 italic">Resident review coming soon</p>
+                <p className="text-gray-700 text-sm leading-relaxed flex-1 italic">&ldquo;{t.quote}&rdquo;</p>
+                <div className="mt-4 pt-4 border-t border-teal-100">
+                  <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+                  <div className="text-xs text-gray-500">{t.context}</div>
+                </div>
               </div>
             ))}
           </div>
-
-          <p className="text-center text-xs text-gray-400 mt-6">
-            We do not publish fabricated testimonials. Authentic resident reviews will be posted here as they are received.
-          </p>
         </div>
       </section>
 

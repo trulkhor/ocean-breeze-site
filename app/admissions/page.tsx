@@ -102,8 +102,8 @@ export default function AdmissionsPage() {
                   desc: "Residents must pay $275/week on time, every week. Move-in requires a $210 deposit plus first week's rent.",
                 },
                 {
-                  title: "Drug Screening Compliance",
-                  desc: "All residents are subject to random drug and alcohol testing as a condition of residency.",
+                  title: "Drug-Free Commitment",
+                  desc: "This is a zero-tolerance, drug-free home. Residents agree to maintain their sobriety as a condition of residency.",
                 },
                 {
                   title: "Follow House Rules",

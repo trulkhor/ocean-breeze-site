@@ -35,7 +35,7 @@ const amenities = [
     category: "Support & Structure",
     items: [
       { name: "24/7 Live-In Manager", desc: "Kevin Smith lives on-site and is available any hour of the day or night." },
-      { name: "Structured Program", desc: "Employment requirements and drug screening create accountability and routine." },
+      { name: "Structured Program", desc: "Employment requirements and community accountability create routine and purpose." },
       { name: "Recovery Guidance", desc: "Kevin provides mentorship, support, and connection to local recovery resources." },
       { name: "IOP Connections", desc: "Informal connections to local Intensive Outpatient Programs and treatment facilities." },
     ],

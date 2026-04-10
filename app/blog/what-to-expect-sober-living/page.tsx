@@ -101,7 +101,7 @@ export default function WhatToExpectPost() {
                 "Employment requirement — you must be working or actively job searching",
                 "Respect for other residents' sleep schedules, belongings, and privacy",
                 "Participation in chores and household maintenance",
-                "Compliance with random drug and alcohol screening",
+                "Commitment to a drug-free and alcohol-free lifestyle",
                 "Curfews or check-in requirements (varies by house)",
                 "No overnight guests without prior approval",
               ].map((rule) => (
@@ -155,17 +155,16 @@ export default function WhatToExpectPost() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Drug Testing</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Sobriety Standards</h2>
             <p className="mb-4">
-              Expect random drug and alcohol testing. At Ocean Breeze, this is a non-negotiable
-              part of living in the house. Testing is random — you won&apos;t know when it&apos;s
-              coming — and the results affect your continued residency.
+              A zero-tolerance policy is standard in sober living. Everyone in the house has made
+              the same commitment to a drug-free and alcohol-free lifestyle, and that shared
+              standard is what makes the environment safe and supportive for everyone.
             </p>
             <p>
-              For residents who are genuinely committed to sobriety, testing isn&apos;t something
-              to fear — it&apos;s something to lean on. It takes away the internal debate and
-              replaces it with external accountability. Many residents say they&apos;re actually
-              grateful for the screening because it makes saying no to substances easier.
+              At Ocean Breeze, the emphasis is on community accountability — residents look out
+              for each other and take that commitment seriously. It&apos;s that shared dedication,
+              more than any formal policy, that keeps the house strong.
             </p>
           </section>
 

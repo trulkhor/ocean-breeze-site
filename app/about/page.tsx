@@ -165,9 +165,9 @@ export default function AboutPage() {
                 icon: "💵",
               },
               {
-                title: "Random Drug Screening",
+                title: "Drug-Free Environment",
                 description:
-                  "Residents are subject to random drug and alcohol screening as a condition of residency. This isn't about distrust — it's about accountability. Everyone in the house is committed to the same drug-free standard, and screening reinforces that commitment.",
+                  "Everyone in the house is committed to the same drug-free standard. Sobriety is a condition of residency, and the community holds each other accountable.",
                 icon: "🧪",
               },
               {

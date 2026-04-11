@@ -58,5 +58,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/blog/sober-living-after-rehab-west-palm-beach`,
+      lastModified: new Date("2026-04-11"),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
   ];
 }

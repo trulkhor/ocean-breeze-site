@@ -25,6 +25,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "mens-sober-living-west-palm-beach",
+    title: "Men's Sober Living in West Palm Beach: How to Choose the Right Recovery Home (2026)",
+    excerpt:
+      "Looking for men's sober living in West Palm Beach, FL? This guide covers what to look for, questions to ask, red flags to avoid, and why structured recovery housing works for men in early sobriety.",
+    date: "2026-04-12",
+    readTime: "9 min",
+    category: "Recovery Housing",
+  },
+  {
     slug: "sober-living-cost-west-palm-beach",
     title: "How Much Does Sober Living Cost in West Palm Beach? [2026 Guide]",
     excerpt:

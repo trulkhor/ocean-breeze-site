@@ -25,6 +25,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "how-to-choose-sober-living-home-west-palm-beach",
+    title: "How to Choose a Sober Living Home in West Palm Beach [2026 Checklist]",
+    excerpt:
+      "A practical 10-point checklist for picking the right men's sober living home in West Palm Beach, FL — FARR certification, house rules, structure, location, and red flags to avoid.",
+    date: "2026-04-14",
+    readTime: "9 min",
+    category: "Choosing a Home",
+  },
+  {
     slug: "sober-living-cost-west-palm-beach",
     title: "How Much Does Sober Living Cost in West Palm Beach? [2026 Guide]",
     excerpt:

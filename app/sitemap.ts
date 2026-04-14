@@ -41,6 +41,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${BASE_URL}/blog/how-to-choose-sober-living-home-west-palm-beach`,
+      lastModified: new Date("2026-04-14"),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
       url: `${BASE_URL}/blog/sober-living-cost-west-palm-beach`,
       lastModified: new Date("2026-01-15"),
       changeFrequency: "yearly",

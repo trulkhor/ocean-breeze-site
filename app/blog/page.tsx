@@ -51,6 +51,15 @@ const posts = [
     readTime: "6 min",
     category: "Education",
   },
+  {
+    slug: "benefits-sober-living-after-rehab-west-palm-beach",
+    title: "7 Benefits of Sober Living After Rehab in West Palm Beach",
+    excerpt:
+      "Finishing rehab is a major milestone — but what comes next matters just as much. Learn why sober living after rehab in West Palm Beach sets you up for lasting recovery.",
+    date: "2026-04-16",
+    readTime: "8 min",
+    category: "Recovery Tips",
+  },
 ];
 
 export default function BlogPage() {

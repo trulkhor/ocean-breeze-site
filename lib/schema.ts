@@ -4,7 +4,7 @@ export const localBusinessSchema = {
   name: "Ocean Breeze Recovery Housing",
   description:
     "Men's sober living home in West Palm Beach, FL offering structured, affordable recovery housing at $275/week.",
-  url: "https://www.oceanbreezerecoveryhousing.com",
+  url: "https://oceanbreezerecoveryhousing.com",
   telephone: "+15616467097",
   email: "oceanbreezerecovery3@gmail.com",
   address: {

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Post Not Found" };
   }
 
-  const url = `https://www.oceanbreezerecoveryhousing.com/blog/${post.slug}`;
+  const url = `https://oceanbreezerecoveryhousing.com/blog/${post.slug}`;
 
   return {
     title: post.title,
@@ -112,7 +112,17 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const url = `https://www.oceanbreezerecoveryhousing.com/blog/${post.slug}`;
+  const url = `https://oceanbreezerecoveryhousing.com/blog/${post.slug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://oceanbreezerecoveryhousing.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://oceanbreezerecoveryhousing.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
 
   const blogPostingSchema = {
     "@context": "https://schema.org",
@@ -122,12 +132,12 @@ export default async function BlogPostPage({ params }: Props) {
     author: {
       "@type": "Organization",
       name: post.author,
-      url: "https://www.oceanbreezerecoveryhousing.com",
+      url: "https://oceanbreezerecoveryhousing.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Ocean Breeze Recovery Housing",
-      url: "https://www.oceanbreezerecoveryhousing.com",
+      url: "https://oceanbreezerecoveryhousing.com",
     },
     datePublished: post.date,
     url,
@@ -141,6 +151,10 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}

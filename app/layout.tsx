@@ -51,8 +51,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-84D2J77CYN"} />
       </body>
-      <GoogleAnalytics gaId="G-84D2J77CYN" />
     </html>
   );
 }

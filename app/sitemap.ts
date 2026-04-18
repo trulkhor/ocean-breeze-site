@@ -1,8 +1,16 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/app/lib/blog-posts";
 
 const BASE_URL = "https://oceanbreezerecoveryhousing.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "yearly",
+    priority: 0.7,
+  }));
+
   return [
     {
       url: BASE_URL,
@@ -40,23 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.6,
     },
-    {
-      url: `${BASE_URL}/blog/sober-living-cost-west-palm-beach`,
-      lastModified: new Date("2026-01-15"),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/blog/what-to-expect-sober-living`,
-      lastModified: new Date("2026-01-22"),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/blog/sober-living-vs-halfway-house`,
-      lastModified: new Date("2026-02-05"),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
+    ...blogEntries,
   ];
 }

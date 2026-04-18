@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
 import ContactCTA from "@/components/ContactCTA";
+import { blogPosts } from "@/app/lib/blog-posts";
 
 export const metadata: Metadata = {
   title: "Recovery Resources Blog | Ocean Breeze Recovery Housing West Palm Beach",
@@ -22,36 +23,6 @@ export const metadata: Metadata = {
     description: "Recovery guides, sober living resources, and insights for men in West Palm Beach, FL.",
   },
 };
-
-const posts = [
-  {
-    slug: "sober-living-cost-west-palm-beach",
-    title: "How Much Does Sober Living Cost in West Palm Beach? [2026 Guide]",
-    excerpt:
-      "A practical, honest breakdown of sober living costs in West Palm Beach, FL. Learn what's included at different price points, what the average weekly rate is, and how Ocean Breeze at $275/week compares.",
-    date: "2026-01-15",
-    readTime: "7 min",
-    category: "Pricing",
-  },
-  {
-    slug: "what-to-expect-sober-living",
-    title: "What to Expect in Sober Living: A Complete Guide",
-    excerpt:
-      "New to sober living? Learn what to expect during your stay — daily structure, house rules, community life, employment requirements, and how to make the most of your recovery journey.",
-    date: "2026-02-01",
-    readTime: "8 min",
-    category: "Recovery Tips",
-  },
-  {
-    slug: "sober-living-vs-halfway-house",
-    title: "Sober Living vs Halfway House: What's the Difference?",
-    excerpt:
-      "Confused about sober living homes vs halfway houses? We break down the key differences in cost, structure, requirements, oversight, and who each type of housing is best suited for.",
-    date: "2026-02-20",
-    readTime: "6 min",
-    category: "Education",
-  },
-];
 
 export default function BlogPage() {
   return (
@@ -87,7 +58,7 @@ export default function BlogPage() {
       <section className="py-20" style={{ backgroundColor: "#FDF6EC" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
+            {blogPosts.map((post) => (
               <BlogCard key={post.slug} {...post} />
             ))}
           </div>
